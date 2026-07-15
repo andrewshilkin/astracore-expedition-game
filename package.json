@@ -1,0 +1,8 @@
+{
+  "name": "astracore-expedition-game",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "node deploy.js"
+  }
+}
