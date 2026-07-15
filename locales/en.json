@@ -1,0 +1,20 @@
+{
+  "menu.title": "Expedition",
+  "menu.start": "Start Game",
+  "menu.settings": "Settings",
+  "menu.credits": "Credits",
+  "menu.privacy": "Privacy Policy",
+  "common.back": "Back",
+  "settings.title": "Settings",
+  "settings.volume": "Volume",
+  "settings.mutedByPortal": "Muted by portal",
+  "credits.title": "Credits",
+  "credits.production": "An Iron Parrot Games Production",
+  "credits.contactLabel": "Contact:",
+  "credits.email": "contact.ironparrot.games@gmail.com",
+  "credits.copyright": "© 2026 Iron Parrot Games",
+  "pause.title": "Paused",
+  "pause.resume": "Resume",
+  "pause.exit": "Exit to Menu",
+  "game.placeholder": "MVP scaffold — add your game here"
+}

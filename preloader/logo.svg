@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Expedition">
+  <!-- Placeholder preloader logo. Replace with your real brand mark
+       (keep it inside resources/preloader/ so vite-plugin-static-copy ships it). -->
+  <circle cx="120" cy="120" r="112" fill="none" stroke="#8E908F" stroke-width="6" />
+  <path d="M120 44 L156 176 L120 150 L84 176 Z" fill="#8E908F" />
+  <text x="120" y="216" text-anchor="middle" font-family="monospace" font-size="26" fill="#8E908F">EXPEDITION</text>
+</svg>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- viewport-fit=cover: fill the notch/safe areas. maximum-scale + user-scalable=no:
+       block pinch-zoom, which would offset/scale the visualViewport and disrupt the game. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Expedition</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      /* Matches Pixi's clear color + the preloader background so any
+         single-frame mismatch during a viewport resize blends in. */
+      background: #12131a;
+      overflow: hidden;
+      font-family: monospace;
+      /* Mobile touch hygiene: block text selection, the iOS long-press callout,
+         tap highlight flashes, and rubber-band overscroll so long-presses/drags
+         on the game don't pop selection or context menus. */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+      overscroll-behavior: none;
+    }
+    canvas {
+      /* Canvas fills the viewport — no letterbox bars. main.ts also calls
+         renderer.resize() on every viewport change to match. */
+      display: block;
+      position: fixed;
+      inset: 0;
+      touch-action: none;
+    }
+    #joystick-overlay {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 180px;
+      height: 180px;
+      z-index: 20;
+      pointer-events: auto;
+      /* Hidden by default — only the game scene shows it (on touch devices). */
+      display: none;
+    }
+    @media (max-width: 480px) {
+      #joystick-overlay { width: 150px; height: 150px; bottom: 16px; right: 16px; }
+    }
+  </style>
+  <script type="module" crossorigin src="./app.CbJdRZY5.js"></script>
+</head>
+<body>
+  <canvas id="app-canvas"></canvas>
+  <div id="joystick-overlay"></div>
+  <!-- Suppress the browser/OS context menu over the game (desktop right-click,
+       Android long-press) — most portals require context menus be prevented. -->
+  <script>
+    window.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+  </script>
+</body>
+</html>
